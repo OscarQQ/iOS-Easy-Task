@@ -12,3 +12,6 @@ Using the latest version of Xcode, create an app that has one button. When the b
 # Your comments or assumptions
 - <add them here>
 
+Met problems when writing tests, create another swift file called weather.swift, aiming to initialize temperature and test it when URL link is invalid (expected: throw errors)
+
+Will not affect the overall performance as Houston Texas (city ID: 4699066) is given to us by OpenWeatherApp API
