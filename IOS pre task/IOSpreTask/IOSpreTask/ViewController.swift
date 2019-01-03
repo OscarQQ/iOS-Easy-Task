@@ -43,9 +43,9 @@ class ViewController: UIViewController {
                 if let data = data {
                     if let jsonObj = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary {
                         if let mainDictionary = jsonObj!.value(forKey: "main") as? NSDictionary {
-                            if let temperature = mainDictionary.value(forKey: "temp") {
+                            if let temperature:Double = mainDictionary.value(forKey: "temp") as? Double {
                                 DispatchQueue.main.async {
-                                    self.TempretureTextField.text = "Houston Temperature: \(temperature)°F"
+                                    self.TempretureTextField.text = String(format:"Houston: %.2f Celsius Degree", temperature - 273.15)
                                 }
                             }
                         } else {
